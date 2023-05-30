@@ -1,10 +1,10 @@
 # EvalutionCity<a name="into"></a>
 
-C++ evaluation for City Bank recrutement pre-test.
+C++ evaluation for City Bank pre-recrutement test.
 
 Content:
 
-1. [Moemory leak](#leak)
+1. [Memory leak](#leak)
 2. [Diamond problem](#diamond)
 3. [Friend function](#friend)
 
@@ -20,7 +20,9 @@ Memory leaks can gradually consume increasing amounts of memory over time, event
 The solution is to free memory as soon as it is no longer needed or accessible.
 
 <details>
-<summary>The [following C++ code](1_leak.cpp) showcases a memory leak</summary>
+<summary>
+The [following C++ code](1_leak.cpp) showcases a memory leak
+</summary>
 
 ```cpp
 #include <stdio.h>
@@ -53,7 +55,7 @@ Aborted (core dumped)
 134
 ```
 
-But uncommenting the "delete ptr;" line make it works until the end.
+But uncommenting the "delete ptr;" line make it work until the end.
 
 
 ### More on memory leaks
@@ -66,15 +68,17 @@ But uncommenting the "delete ptr;" line make it works until the end.
 # 2 How do you overcome diamond problem in C++? <a name="diamond"></a>
 
 The diamond problem refers to a situation where a class inherits from two or more classes that have a common base class.
-
 As a result, there can be ambiguity and conflicts when accessing members or methods inherited from the common base class.
+This occurs because each intermediate class along the inheritance hierarchy may contain its own copy of the inherited members.
 
 To overcome the diamond problem, the virtual inheritance mechanism is used.
 It allows the derived class to inherit the common base class only once, regardless of how many intermediate classes are involved.
 The compiler can correctly resolve member access and method calls in the inheritance hierarchy.
 
 <details>
-<summary>The [following C++ code](2_diamond.cpp) showcases a diamond problem</summary>
+<summary>
+The [following C++ code](2_diamond.cpp) showcases a diamond problem
+</summary>
 
 ```cpp
 #include <iostream>
@@ -107,7 +111,7 @@ g++ 2_diamond.cpp -o 2_diamond && ./2_diamond; echo $?
 1
 ```
 
-But uncommenting the __two__ "virtual" tokens make it works and outputs `D`.
+But uncommenting the __two__ "virtual" tokens make it work and outputs `D`.
 
 ### More on diamond problem
 
@@ -124,7 +128,9 @@ A friend function defined outside a class scope but with the rights to access al
 Friends functions are used when access to private data of a class are required.
 
 <details>
-<summary>The [following C++ code](3_friend.cpp) showcases a friend class</summary>
+<summary>
+The [following C++ code](3_friend.cpp) showcases a friend class
+</summary>
 
 ```cpp
 #include <iostream>
