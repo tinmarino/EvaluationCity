@@ -9,9 +9,9 @@ C++ evaluation for City Bank pre-recrutement test. Content:
 
 # 1/ What is a memory leak? Write a sample of code to and a solution to prevent memory leak <a name="leak"></a>
 
-A memory leak is a type of software bug that occurs when a program fails to release memory that is not needed anymore.
+A memory leak is a type of software bug that occurs when a program fails to release memory that is no longer needed.
 
-Memory leaks can gradually consume increasing amounts of memory over time, eventually leading to memory exhaustion as the following example.
+Memory leaks can gradually consume increasing amounts of memory over time, eventually leading to memory exhaustion. For example:
 
 The solution is to free memory as soon as it is no longer needed or accessible.
 
@@ -108,7 +108,7 @@ But uncommenting the __two__ "virtual" tokens makes it work and outputs `D`.
 * [Source of code (Stackoverflow)](https://stackoverflow.com/questions/2659116/)
 # 3 What is a friend function and when should a function be made friend? Please write a simple code as an example of it. <a name="friend"></a>
 
-A friend function defined outside a class scope but with the rights to access all the members of this class, even members with restrictions (private and protected).
+A friend function is a function implemented outside a class scope but with the rights to access all the members of this class, even members with restrictions (private and protected).
 
 Friends functions are used when access to private data of a class are required.
 
