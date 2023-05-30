@@ -1,15 +1,11 @@
 # EvalutionCity<a name="into"></a>
 
-C++ evaluation for City Bank pre-recrutement test.
-
-Content:
+C++ evaluation for City Bank pre-recrutement test. Content:
 
 1. [Memory leak](#leak)
 2. [Diamond problem](#diamond)
 3. [Friend function](#friend)
 
-
-TODO Details
 
 # 1/ What is a memory leak? Write a sample of code to and a solution to prevent memory leak <a name="leak"></a>
 
@@ -19,10 +15,7 @@ Memory leaks can gradually consume increasing amounts of memory over time, event
 
 The solution is to free memory as soon as it is no longer needed or accessible.
 
-<details>
-<summary>
 The [following C++ code](1_leak.cpp) showcases a memory leak
-</summary>
 
 ```cpp
 #include <stdio.h>
@@ -55,7 +48,7 @@ Aborted (core dumped)
 134
 ```
 
-But uncommenting the "delete ptr;" line make it work until the end.
+But uncommenting the "delete ptr;" line makes it work until the end.
 
 
 ### More on memory leaks
@@ -63,7 +56,6 @@ But uncommenting the "delete ptr;" line make it work until the end.
 * [Definition of memory leak (Wikipedia)](https://en.wikipedia.org/wiki/Memory_leak)
 * [Advices to avoid memory leaks in C++ (GeeksForGeeks)](https://www.geeksforgeeks.org/memory-leak-in-c-and-how-to-avoid-it)
 
-</details>
 
 # 2 How do you overcome diamond problem in C++? <a name="diamond"></a>
 
@@ -75,10 +67,7 @@ To overcome the diamond problem, the virtual inheritance mechanism is used.
 It allows the derived class to inherit the common base class only once, regardless of how many intermediate classes are involved.
 The compiler can correctly resolve member access and method calls in the inheritance hierarchy.
 
-<details>
-<summary>
 The [following C++ code](2_diamond.cpp) showcases a diamond problem
-</summary>
 
 ```cpp
 #include <iostream>
@@ -111,26 +100,19 @@ g++ 2_diamond.cpp -o 2_diamond && ./2_diamond; echo $?
 1
 ```
 
-But uncommenting the __two__ "virtual" tokens make it work and outputs `D`.
+But uncommenting the __two__ "virtual" tokens makes it work and outputs `D`.
 
 ### More on diamond problem
 
 * [Definition of the diamond problem (Wikipedia)](https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem)
 * [Source of code (Stackoverflow)](https://stackoverflow.com/questions/2659116/)
-</details>
-
-
-
 # 3 What is a friend function and when should a function be made friend? Please write a simple code as an example of it. <a name="friend"></a>
 
 A friend function defined outside a class scope but with the rights to access all the members of this class, even members with restrictions (private and protected).
 
 Friends functions are used when access to private data of a class are required.
 
-<details>
-<summary>
 The [following C++ code](3_friend.cpp) showcases a friend class
-</summary>
 
 ```cpp
 #include <iostream>
@@ -181,5 +163,3 @@ The second string match? true
 ### More on friend functions
 
 * [Definition of friend function (Wikipedia)](https://en.wikipedia.org/wiki/Friend_function)
-
-</details>
