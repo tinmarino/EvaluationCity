@@ -158,7 +158,7 @@ g++ 3_friend.cpp -o 3_friend && ./3_friend; echo $?
 The first string match? false
 The second string match? true
 0
-``
+```
 
 ### More on friend functions
 
