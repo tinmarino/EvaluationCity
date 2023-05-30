@@ -110,7 +110,7 @@ But uncommenting the __two__ "virtual" tokens makes it work and outputs `D`.
 
 A friend function is a function implemented outside a class scope but with the rights to access all the members of this class, even members with restrictions (private and protected).
 
-Friends functions are used when access to private data of a class are required.
+Friends functions are used when access to private data of a class is required even outside of this class.
 
 The [following C++ code](3_friend.cpp) showcases a friend class
 
